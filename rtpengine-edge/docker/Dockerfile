@@ -1,6 +1,7 @@
 FROM debian:trixie-20230725
 
 RUN apt-get update \
+  && apt-get install -y libpcre3 libpcre3-dev
   && apt-get -y --quiet --force-yes upgrade curl iproute2 \
   && apt-get install -y --no-install-recommends ca-certificates gcc g++ make build-essential git libxtables-dev libavfilter-dev \
   libevent-dev libpcap-dev libxmlrpc-core-c3-dev python3-markdown bash\
